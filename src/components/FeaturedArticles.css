@@ -1,0 +1,102 @@
+/* Container and Grid */
+.featured-articles-container {
+    padding: 60px 20px;
+    background-color: #f4f7fb;
+    text-align: center;
+    max-width: 1200px;  /* Limit the width of the section */
+    margin: 0 auto;  /* Center the container */
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #34495e;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Display 3 articles in one row */
+    gap: 40px;  /* Spacing between the cards */
+    justify-items: center;
+  }
+  
+  /* Article Card Styling */
+  .article-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    width: 100%;  /* Ensure each article takes up equal space */
+    max-width: 350px;  /* Set a maximum width to avoid overly large cards */
+  }
+  
+  .article-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Article Image Styling */
+  .article-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .article-card:hover .article-image img {
+    transform: scale(1.1);
+  }
+  
+  /* Article Content Styling */
+  .article-content {
+    padding: 20px;
+  }
+  
+  .article-title {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .article-excerpt {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  .read-more-btn {
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .articles-grid {
+      grid-template-columns: 1fr 1fr;  /* Display 2 articles per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .articles-grid {
+      grid-template-columns: 1fr;  /* Display 1 article per row on small screens */
+    }
+  
+    .article-card {
+      width: 100%;
+    }
+  }
+  

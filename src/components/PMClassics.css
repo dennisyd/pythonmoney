@@ -1,0 +1,124 @@
+/* Parent Container */
+.parent-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* Optionally, center child elements */
+    display: flex;
+    justify-content: center;  /* Centers the PM-classics-container */
+  }
+  
+  /* Container and Grid */
+  .PM-classics-container {
+    width: 100%;             /* Ensure the container uses full available width */
+    max-width: 1200px;       /* Limit the width of the container */
+    padding: 60px 20px;
+    background-color: #f4f7fb;
+    margin: 0 auto;          /* Center the container */
+    text-align: center;
+    /* Remove flex properties if not needed */
+  }
+  
+
+.section-title {
+    font-size: 2.5rem;
+    color: #34495e;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.section-description {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the description */
+  }
+
+/* Grid of Classic Posts */
+.classics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Display 3 posts in one row */
+    gap: 40px;  /* Spacing between the cards */
+    margin: 0 auto;  /* Center the grid */
+    max-width: 1000px;  /* Keep the grid from stretching too far */
+  }
+
+/* Classic Post Card Styling */
+.classic-post-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    max-width: 350px;  /* Set a maximum width to avoid overly large cards */
+  }
+
+.classic-post-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  }
+
+/* Classic Post Image Styling */
+.classic-post-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+.classic-post-card:hover .classic-post-image img {
+    transform: scale(1.1);
+  }
+
+/* Classic Post Content Styling */
+.classic-post-content {
+    padding: 20px;
+  }
+
+.post-title {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.post-excerpt {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+
+.read-more-btn {
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+.read-more-btn:hover {
+    background-color: #2980b9;
+  }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .classics-grid {
+    grid-template-columns: 1fr 1fr;  /* Display 2 posts per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .classics-grid {
+    grid-template-columns: 1fr;  /* Display 1 post per row on small screens */
+  }
+
+  .classic-post-card {
+    width: 100%;
+  }
+}

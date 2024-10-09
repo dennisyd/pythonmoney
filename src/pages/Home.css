@@ -1,0 +1,180 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+/* Hero Section */
+.hero-section {
+    background: url('./david-clode-oJlt2XBWuWs-unsplash.jpg') center center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #FFD700;  /* Bold gold color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add some text shadow for extra bold effect */
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: white;  /* Retain white for the subtext */
+  }
+  
+  
+  
+  /* Grid Layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  
+  /* Boxed Content */
+  .boxed-content {
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 40px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .boxed-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card Layout */
+  .card-layout {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .card-layout .card {
+    background: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    width: calc(50% - 10px);
+  }
+  
+  .card-layout .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Highlighted Box for Subscription */
+  .highlighted-box {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    text-align: center;
+  }
+  
+  .highlighted-box h2 {
+    color: white;
+  }
+  
+  .highlighted-box p {
+    color: white;
+  }
+  
+  .highlighted-box button {
+    background-color: #f39c12;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .highlighted-box button:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Section Dividers */
+  .section-divider {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    margin: 60px 0;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar .boxed-content {
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  /* Typography */
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #2980b9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .home-container {
+      padding: 20px 10px;
+    }
+  
+    .card-layout .card {
+      width: 100%;
+    }
+  }
+  
